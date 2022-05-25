@@ -10,7 +10,7 @@ import com.capgemini.beans.Producto;
 public class App {
 	public static void main(String[] args) {
 
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("producto");
 
 		Producto p = (Producto) appContext.getBean(Producto.class);
 		System.out.println(
