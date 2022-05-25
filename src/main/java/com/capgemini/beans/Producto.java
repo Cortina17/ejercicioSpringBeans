@@ -2,10 +2,10 @@ package com.capgemini.beans;
 
 public class Producto {
 
-	String nombre;
-	double precio;
-	int cantidad;
-	double subtotal;
+	private String nombre;
+	private double precio;
+	private int cantidad;
+	private double subtotal;
 
 	public Producto() {
 	}

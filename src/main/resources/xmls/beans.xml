@@ -3,6 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="patata" class="com.capgemini.beans.Producto"></bean>
+	<bean id="patata" class="com.capgemini.beans.Producto" name="patata">
+		<property name="nombre" value="Patata"></property>
+		<property name="precio" value="1.25"></property>
+		<property name="cantidad" value="3"></property>
+	</bean>
 
 </beans>

@@ -9,14 +9,13 @@ import com.capgemini.beans.Producto;
 
 public class App {
 	public static void main(String[] args) {
-		
+
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-		
-				Producto patata = (Producto) appContext.getBean("patata");
-				
-
-				
+		Producto p = (Producto) appContext.getBean("patata");
+		System.out.println(
+				"El nombre del producto es " + p.getNombre() + ", esta a " + p.getPrecio() + ", y como te llevas "
+						+ p.getCantidad() + ", tienes que pagar: " + (p.getPrecio() * (p.getCantidad())));
 
 		((ConfigurableApplicationContext) appContext).close();
 	}
