@@ -12,7 +12,7 @@ public class App {
 
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-		Producto p = (Producto) appContext.getBean("patata");
+		Producto p = (Producto) appContext.getBean(Producto.class);
 		System.out.println(
 				"El nombre del producto es " + p.getNombre() + ", esta a " + p.getPrecio() + ", y como te llevas "
 						+ p.getCantidad() + ", tienes que pagar: " + (p.getPrecio() * (p.getCantidad())));
