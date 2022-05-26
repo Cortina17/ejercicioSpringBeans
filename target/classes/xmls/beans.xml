@@ -3,10 +3,28 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="patata" class="com.capgemini.beans.Producto" name="patata">
-		<property name="nombre" value="Patata"></property>
-		<property name="precio" value="1.25"></property>
-		<property name="cantidad" value="3"></property>
+	<bean id="patata" class="com.capgemini.beans.Producto">
+		<constructor-arg type="String" index="0"
+			value="Patata"></constructor-arg>
+		<constructor-arg type="double" index="1" value="1.10"></constructor-arg>
+		<constructor-arg type="int" index="2" value="9"></constructor-arg>
+	</bean>
+
+	<bean id="tomate" class="com.capgemini.beans.Producto">
+		<constructor-arg type="String" index="0"
+			value="Tomate"></constructor-arg>
+		<constructor-arg type="double" index="1" value="1.50"></constructor-arg>
+		<constructor-arg type="int" index="2" value="5"></constructor-arg>
+	</bean>
+
+	<bean id="carro" class="com.capgemini.beans.Carro">
+		<property name="total" value="30"></property>
+		<property name="productos">
+			<list>
+				<ref bean="patata"></ref>
+				<ref bean="tomate"></ref>
+			</list>
+		</property>
 	</bean>
 
 </beans>

@@ -10,11 +10,22 @@ public class Producto {
 	public Producto() {
 	}
 
-	public Producto(String nombre, double precio, int cantidad, double subtotal) {
+	public Producto(String nombre, double precio, int cantidad) {
 		this.nombre = nombre;
 		this.precio = precio;
 		this.cantidad = cantidad;
-		this.subtotal = subtotal;
+	}
+
+	public Producto(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Producto(double precio) {
+		this.precio = precio;
+	}
+
+	public Producto(int cantidad) {
+		this.cantidad = cantidad;
 	}
 
 	public double getSubtotal() {
